@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Muhammad Shaheer — Developer Portfolio
 
-## Getting Started
+![Portfolio Preview](./public/favicon.ico) 
+*(Note: Add an actual screenshot to your public folder and link it here!)*
 
-First, run the development server:
+A professional, high-performance developer portfolio built with **Next.js 16 (App Router)**, **TypeScript**, and **Framer Motion**. Designed with a focus on dark-mode aesthetics, micro-interactions, and premium UI/UX.
 
+🌐 **Live Website**: [muhammad-shaheer.dev](https://muhammad-shaheer.dev)
+
+---
+
+## ✨ Features
+
+- **Premium Dark Mode Design**: Deep blacks (`#101010`) combined with vibrant neon green (`#00d992`) accents for a modern, hacker-inspired aesthetic.
+- **Interactive Terminal Hero**: Animated typing effects simulating an IDE terminal.
+- **Custom GitHub Lifetime Graph**: Integrates directly with the GitHub GraphQL API to fetch and render a custom lifetime contribution heatmap.
+- **IDE Project Mockups**: Framer Motion powered IDE mockup to showcase selected work like it's being coded live.
+- **Zero-Config CSS**: Built entirely with standard CSS Variables for maximum flexibility without the bloat of massive utility libraries.
+- **SEO Optimized**: Fully configured with Next.js metadata and open-graph tags.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/shaheer162008/muhammad-shaheer.dev.git
+cd muhammad-shaheer.dev
 ```
 
+### 2. Install dependencies
+```bash
+npm install
+# or yarn install / pnpm install
+```
+
+### 3. Setup Environment Variables
+To unlock the **Interactive Lifetime GitHub Graph**, you need to provide a GitHub Personal Access Token (PAT). 
+
+1. Go to [GitHub Developer Settings](https://github.com/settings/tokens).
+2. Generate a new token (classic or fine-grained) with **read-only** access to public data.
+3. Create a `.env.local` file in the root of the project:
+
+```env
+GITHUB_TOKEN=ghp_your_token_here
+```
+*(If no token is provided, the site gracefully falls back to a static image of your last 12 months of contributions).*
+
+### 4. Run the development server
+```bash
+npm run dev
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Customizing
 
-## Learn More
+If you're forking this for your own portfolio:
+1. Update `DESIGN.md` if you want to change the color tokens.
+2. Edit `src/app/globals.css` to update the CSS root variables.
+3. Replace the `username = "shaheer162008"` in `src/components/home/github-activity.tsx` to your own username.
+4. Swap the icons in the `public/icons` folder to match your brand.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Open Source
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is open-source and available for anyone to learn from, fork, or use as a starting point for their own portfolio. 
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Designed and developed by [Muhammad Shaheer](https://github.com/shaheer162008).*
