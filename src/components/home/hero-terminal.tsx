@@ -7,7 +7,7 @@ const maxWordLength = Math.max(...words.map((w) => w.length));
 
 export function HeroTerminal() {
   const [index, setIndex] = useState(0);
-  const [tick, setTick] = useState(0);
+  const [tick, setTick] = useState(0); // increments every cycle, even on repeats
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -66,7 +66,9 @@ export function HeroTerminal() {
           white-space: nowrap;
           display: inline-block;
           overflow: hidden;
-          animation: typing 1.4s steps(${maxWordLength}) forwards;
+          border-right: 2px solid var(--green);
+          animation: typing 1.4s steps(${maxWordLength}) forwards,
+            cursor-blink 0.75s step-end infinite;
         }
         @keyframes typing {
           from {
@@ -74,6 +76,15 @@ export function HeroTerminal() {
           }
           to {
             width: 100%;
+          }
+        }
+        @keyframes cursor-blink {
+          from,
+          to {
+            border-color: transparent;
+          }
+          50% {
+            border-color: var(--green);
           }
         }
       `}</style>
